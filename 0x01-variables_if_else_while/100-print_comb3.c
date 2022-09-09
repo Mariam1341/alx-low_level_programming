@@ -18,21 +18,29 @@
  */
 int main(void)
 {
-	int num = 0;
-	int n1,n2;
-	while(num < 100){
-		
-		n1 = num %10;
-		n2 = num /10;
-		if(n1 <= n2){
-			num++;
-			continue;
+	int c;
+	int d = 0;
+
+	while (d < 10)
+	{
+		c = 0;
+		while (c < 10)
+		{
+			if (d != c && d < c)
+			{
+				putchar('0' + d);
+				putchar('0' + c);
+
+				if (c + d != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+
+			c++;
 		}
-		putchar(n2%10+'0');
-		putchar(num%10+'0');
-		putchar(',');
-		putchar(' ');
-		num++;
+		d++;
 	}
 	putchar('\n');
 	return (0);
