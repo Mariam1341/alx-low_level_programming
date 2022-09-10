@@ -10,9 +10,8 @@ int main(void)
 
 	while (num <= 122)
 	{
-		if(num == 101 || num == 113){
+		if (num == 101 || num == 113)
 			num++;
-		}
 		putchar(num);
 		num++;
 	}
