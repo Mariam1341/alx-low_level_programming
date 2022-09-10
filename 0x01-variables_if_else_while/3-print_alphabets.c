@@ -15,9 +15,9 @@ int main(void)
 		num++;
 	}
 	num = 65;
-	
-	while 
-	(num <= 90){
+
+	while (num <= 90)
+	{
 		putchar(num);
 		num++;
 	}

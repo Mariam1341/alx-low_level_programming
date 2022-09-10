@@ -16,13 +16,15 @@ int main(void)
 	res = n % 10;
 	printf("Last digit of %i", n);
 	printf(" is %i and is ", res);
-	if(res < 6){
-		if(res == 0){
+	if (res < 6)
+	{
+		if (res == 0)
 			printf("0\n");
-		}else{
+		else
 			printf("less than 6 and not 0\n");
-		}
-	}else{
+	}
+	else
+	{
 		printf("greater than 5\n");
 	}
 	return (0);
