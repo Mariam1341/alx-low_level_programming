@@ -17,7 +17,7 @@ int main(void)
 		num++;
 	}
 
-	while(num < 16)
+	while (num < 16)
 	{
 		putchar(n);
 		n++;
