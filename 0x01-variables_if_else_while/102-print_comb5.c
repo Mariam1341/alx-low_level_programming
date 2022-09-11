@@ -11,7 +11,7 @@ int main(void)
 int i, j, k, l;
 
 i = '0';
-while (i < '10')
+while (i <= '9')
 {
 	j = '0';
 	while (j <= '9')
