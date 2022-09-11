@@ -32,9 +32,9 @@ while (i <= '9')
 						putchar(k);
 						putchar(l);
 					if (i == '9' && j == '8' && k == '9' && l == '9')
-						break;	
+							break;	
 					putchar(',');
-					putchar(' ');	
+					putchar(' ');
 					}
 				}
 				l++;
@@ -44,7 +44,7 @@ while (i <= '9')
 		j++;
 	}
 	i++;
-}
+}	
 putchar('\n');
 return (0);
 }
