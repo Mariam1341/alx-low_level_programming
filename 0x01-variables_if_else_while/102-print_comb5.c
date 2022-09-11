@@ -8,42 +8,43 @@
  */
 int main(void)
 {
-int c;
-int d;
-int e;
-int f = 0;
+int i, j, k, l;
 
-while (f < 10)
+
+while (i < 10)
 {
-	e = 0;
-	while (e < 10)
+	j = 0;
+	while (j < 10)
 	{
-		d = 0;
-		while (d < 10)
+		k = 0;
+		while (k < 10)
 		{
-			c = 0;
-			while (c < 10)
+			l = 0;
+			while (l < 10)
 			{
-				if (!(f == c && e == d))
+				if ((i == k && j < l) || (i < k))
 				{
-					putchar('0' + f);
-					putchar('0' + e);
-					putchar(' ');
-					putchar('0' + d);
-					putchar('0' + c);
-					if (!(f + e == 18 && c + d == 17 && d == 9))
+					if (i != k || j != l)
 					{
-						putchar(',');
+						putchar(i);
+						putchar(j);
 						putchar(' ');
+						putchar(k);
+						putchar(l);
+					
+						if (i == '9' && j == '8' && k == '9' && l ='9')
+							break;	
+						putchar(',');
+						putchar(' ');	
 					}
 				}
-				c++;
+				l++;
 			}
-			d++;
+			k++;
 		}
-		e++;
+		j++;
 	}
-	f++;
+	i++;
 }
 putchar('\n');
 return (0);
