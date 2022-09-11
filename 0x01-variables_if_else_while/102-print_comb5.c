@@ -10,17 +10,14 @@ int main(void)
 {
 int i, j, k, l;
 
-i = '0';
-while (i <= '9')
+for(i = '0'; i <= '9'; i++)
 {
 	j = '0';
-	while (j <= '9')
+	for(j = '0'; j <= '9'; j++)
 	{
-		k = '0';
-		while (k <= '9')
+		for(k = '0'; k <= '9'; k++)
 		{
-			l = '0';
-			while (l <= '9')
+			for(l = '0'; l <= '9'; l++)
 			{
 				if ((i == k && j < l) || (i < k))
 				{
@@ -37,13 +34,9 @@ while (i <= '9')
 					putchar(' ');
 					}
 				}
-				l++;
 			}
-			k++;
 		}
-		j++;
 	}
-	i++;
 }
 putchar('\n');
 return (0);
