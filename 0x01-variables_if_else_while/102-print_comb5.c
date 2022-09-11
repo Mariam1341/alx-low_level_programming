@@ -14,13 +14,13 @@ i = '0';
 while (i < '10')
 {
 	j = '0';
-	while (j < '10')
+	while (j <= '9')
 	{
 		k = '0';
-		while (k < '10')
+		while (k <= '9')
 		{
 			l = '0';
-			while (l < '10')
+			while (l <= '9')
 			{
 				if ((i == k && j < l) || (i < k))
 				{
