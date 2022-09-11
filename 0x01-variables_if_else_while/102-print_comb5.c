@@ -10,17 +10,17 @@ int main(void)
 {
 int i, j, k, l;
 
-
-while (i < 10)
+i = '0';
+while (i < '10')
 {
-	j = 0;
-	while (j < 10)
+	j = '0';
+	while (j < '10')
 	{
-		k = 0;
-		while (k < 10)
+		k = '0';
+		while (k < '10')
 		{
-			l = 0;
-			while (l < 10)
+			l = '0';
+			while (l < '10')
 			{
 				if ((i == k && j < l) || (i < k))
 				{
@@ -31,11 +31,10 @@ while (i < 10)
 						putchar(' ');
 						putchar(k);
 						putchar(l);
-					
-						if (i == '9' && j == '8' && k == '9' && l =='9')
-							break;	
-						putchar(',');
-						putchar(' ');	
+					if (i == '9' && j == '8' && k == '9' && l == '9')
+						break;	
+					putchar(',');
+					putchar(' ');	
 					}
 				}
 				l++;
