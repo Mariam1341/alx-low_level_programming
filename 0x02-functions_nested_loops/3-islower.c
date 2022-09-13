@@ -2,7 +2,7 @@
 /**
  * print_alphabet - Entry point
  *
- *Description: checks for lowercase character. if lower return 1 otherwise return 0
+ *description: checks for lowercase character. if lower return 1 otherwise return 0
  *
  * Return: Always 0 (Success)
  */
