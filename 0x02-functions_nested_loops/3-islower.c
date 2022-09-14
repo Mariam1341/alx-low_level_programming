@@ -4,7 +4,7 @@
  *
  *description:checks for lowercase character
  *
- * Return: Always 0 (Success)
+ * Return: integer (Success)
  */
 int _islower(int c)
 {

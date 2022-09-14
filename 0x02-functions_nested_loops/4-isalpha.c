@@ -4,7 +4,7 @@
  *
  *description: checks for alphabetic character
  *
- * Return: Always 0 (Success)
+ * Return: integer (Success)
  */
 int _isalpha(int c)
 {

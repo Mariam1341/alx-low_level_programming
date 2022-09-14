@@ -4,7 +4,7 @@
  *
  *description:prints the sign of a number
  *
- * Return: Always 0 (Success)
+ * Return: integer (Success)
  */
 int _abs(int n)
 {
