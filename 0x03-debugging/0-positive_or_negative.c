@@ -7,7 +7,7 @@
  *@n : integer to check
  * Return: Always 0 (Success)
  */
-int positive_or_negative(int n)
+void positive_or_negative(int n)
 {
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
@@ -17,6 +17,4 @@ int positive_or_negative(int n)
 		printf("%i is negative\n", n);
 	else
 		printf("%i is zero\n", n);
-
-	return (0);
 }
