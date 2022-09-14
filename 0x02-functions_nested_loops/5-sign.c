@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_sign - Entry point
+ * print_sign(int n) - Entry point
  *
  *description:prints the sign of a number
  *
