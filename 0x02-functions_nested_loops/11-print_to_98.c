@@ -15,37 +15,12 @@ void print_to_98(int n)
 	}
 
 	while( i != 98){
-		if (i == 0)
-		{
-			_putchar('0' + i);
-		}
-		else if (i < 10)
-		{
-			_putchar(' ');
-			_putchar(' ');
-			_putchar('0' + i);
-		}
-		else if (i < 100)
-		{
-			_putchar(' ');
-			_putchar('0' + i / 10);
-			_putchar('0' + i % 10);
-		}
-		else
-		{
-			_putchar('0' + i / 100);
-			_putchar('0' + (i - 100) / 10);
-			_putchar('0' + i % 10);
-		}
-
-		_putchar(',');
-		_putchar(' ');
+		printf("%i, ", i);
 		if (check == 1)
 			i--;
 		else
 			i++;	
 	}
-	_putchar('0' + 98 / 10);
-	_putchar('0' + 98 % 10);
+	printf("%i", 98);
 	
 }
