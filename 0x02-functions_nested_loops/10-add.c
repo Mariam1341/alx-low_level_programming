@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * add(int, int) - Entry point
+ * add(int a, int b) - Entry point
  *
  *description:adds two integers and returns the result
  *

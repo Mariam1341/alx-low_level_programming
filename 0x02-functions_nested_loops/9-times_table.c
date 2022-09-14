@@ -2,7 +2,7 @@
 /**
  * times_table(void) - Entry point
  *
- *description:prints the 9 times table, starting with 0
+ *Description:prints the 9 times table, starting with 0
  *
  * Return: Always 0 (Success)
  */
@@ -37,5 +37,5 @@ void times_table(void)
 			}
 		}
 		_putchar('\n');
-	}	
+	}
 }
