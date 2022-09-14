@@ -14,7 +14,7 @@ void print_to_98(int n)
 	{
 			if (i == 0)
 			{
-				_putchar('0' + res);
+				_putchar('0' + i);
 			}
 			else if (i < 10)
 			{
