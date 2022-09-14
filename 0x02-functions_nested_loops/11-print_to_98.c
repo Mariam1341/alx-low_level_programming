@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * print_to_98(int n) - Entry point
+ * print_to_98 - prints all natural numbers from n to 98
  *
- *description: prints all natural numbers from n to 98
+ *@n : inial integer
  *
  * Return: void 
  */

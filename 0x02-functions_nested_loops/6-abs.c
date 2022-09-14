@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _abs(int n) - Entry point
+ * _abs - prints the abslute value
  *
- *description:prints the sign of a number
+ *@n : integer to check the case
  *
- * Return: integer (Success)
+ * Return: the abslute value
  */
 int _abs(int n)
 {

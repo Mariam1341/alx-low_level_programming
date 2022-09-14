@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * print_sign(int n) - Entry point
+ * print_sign - prints the sign of a number
  *
- *description:prints the sign of a number
+ *@n : integer to check the case
  *
- * Return: integer (Success)
+ * Return: 0 or 1 or -1
  */
 int print_sign(int n)
 {

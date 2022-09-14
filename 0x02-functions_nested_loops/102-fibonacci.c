@@ -16,7 +16,7 @@ int main(void)
 		a = b;
 		b = next;
 		printf("%i", next);
-		if (i < 49)
+		if (i < 1023)
 			printf(", ");
 	}
 		

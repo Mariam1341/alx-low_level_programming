@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _isalpha(int c) - Entry point
+ * _isalpha - checks for alphabetic character
  *
- *description: checks for alphabetic character
+ *@c : character to check the case 
  *
- * Return: integer (Success)
+ * Return: 0 or 1
  */
 int _isalpha(int c)
 {
