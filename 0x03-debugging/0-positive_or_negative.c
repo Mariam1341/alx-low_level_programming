@@ -4,13 +4,11 @@
 /**
  * positive_or_negative - Get a random number and print the number and
  *if it is positive, negative, or zero
- *
- * Return: statment
+ *@n : integer to check
+ * Return: Always 0 (Success)
  */
-int positive_or_negative(void)
+int positive_or_negative(int n)
 {
-	int n;
-
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
