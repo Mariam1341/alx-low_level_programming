@@ -2,7 +2,7 @@
 /**
  * print_alphabet - Entry point
  *
- *description:'prints 10 times the alphabet, in lowercase'
+ *description:prints 10 times the alphabet, in lowercase
  *
  * Return: Always 0 (Success)
  */
