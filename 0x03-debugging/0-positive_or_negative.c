@@ -5,7 +5,7 @@
  * positive_or_negative - Get a random number and print the number and
  *if it is positive, negative, or zero
  *@n : integer to check
- * Return: Always 0 (Success)
+ * Return: void (Success)
  */
 void positive_or_negative(int n)
 {
