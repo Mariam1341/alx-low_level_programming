@@ -3,7 +3,7 @@
 *
 *@s : pointer of character
 *
-*Return : length of a string 
+*Return : int
 */
 int _strlen(char *s)
 {
