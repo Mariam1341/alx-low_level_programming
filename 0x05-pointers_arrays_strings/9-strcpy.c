@@ -8,14 +8,14 @@
 *@dest : pointer to array
 *@src : pointer to string to copy
 *
-*Return : string
+*Return : Pointer to `dest`
 */
 char *_strcpy(char *dest, char *src)
 {
 	int len = strlen(src);
 	int i = 0;
 
-	while (i < len)
+	while (src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;
