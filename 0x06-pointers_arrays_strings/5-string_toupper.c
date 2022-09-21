@@ -3,7 +3,7 @@
  *
  * @a : pointer to the array
  *
- * Return : pointer to the result of concatenates two strings
+ * Return : pointer to the string after Ýransformation
 */
 char *string_toupper(char *a)
 {
