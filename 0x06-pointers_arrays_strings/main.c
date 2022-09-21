@@ -7,48 +7,31 @@
  * Return: Always 0.
  */
  
- char *_strncpy(char *dest, char *src, int n)
+int _strcmp(char *s1, char *s2)
 {
 	int i = 0;
-
-	while (src[i] != '\0' && i < n)
-		dest[i] = src[i];
-
-	for ( ; i < n; i++)
-		dest[i] = '\0';
-
-	return (dest);
+	
+	while (s1[i] != '\0' || s2[i] != '\0')
+	{
+		if (s1[i] != s2[i])
+		{
+			if (s1[i] > s2[i])
+				return (15);
+			else
+				return (-15);	
+		}
+		else
+			i++;	
+	}
+	return (0);
 }
 int main(void)
 {
-    char s1[98];
-    char *ptr;
-    int i;
+    char s1[] = "Hello";
+    char s2[] = "World!";
 
-    for (i = 0; i < 98 - 1; i++)
-    {
-        s1[i] = '*';
-    }
-    s1[i] = '\0';
-    printf("%s\n", s1);
-    ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 5);
-    printf("%s\n", s1);
-    printf("%s\n", ptr);
-    ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 90);
-    printf("%s", s1);
-    printf("%s", ptr);
-    for (i = 0; i < 98; i++)
-    {
-        if (i % 10)
-        {
-            printf(" ");
-        }
-        if (!(i % 10) && i)
-        {
-            printf("\n");
-        }
-        printf("0x%02x", s1[i]);
-    }
-    printf("\n");
+    printf("%d\n", _strcmp(s1, s2));
+    printf("%d\n", _strcmp(s2, s1));
+    printf("%d\n", _strcmp(s1, s1));
     return (0);
 }
