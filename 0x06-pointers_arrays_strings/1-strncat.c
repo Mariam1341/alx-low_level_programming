@@ -7,7 +7,6 @@
  *
  * Return: pointer to the result of concatenates two strings
 */
-
 char *_strncat(char *dest, char *src, int n)
 {
 	int a = 0, i = 0;
@@ -22,6 +21,7 @@ char *_strncat(char *dest, char *src, int n)
 		a++;
 	}
 	dest[i + 1] = '\0';
+
 	return (dest);	
 }
 
