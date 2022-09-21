@@ -1,4 +1,3 @@
-#include "main.h"
 /**
  * *_strncat - concatenates two strings
  *
@@ -11,18 +10,18 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int i = _strlen(src);
+	int a = 0, i = 0;
 
-	if (i < n)
-		return (_strcat(dest,src));
-	else
+	while (dest[i] != '\0')
+		i++;
+
+	while (src[a] != '\0' && a < n)
 	{
-		int j;
-		char arr[n+1];
-		for (j = 0; j < n; j++)
-			arr[j] = src[j];
-		arr[j] = '\0';
-		return (_strcat(dest,arr));
-	}	
+		dest[i] = src[a];
+		i++;
+		a++;
+	}
+	dest[i + 1] = '\0';
+	return (dest);	
 }
 

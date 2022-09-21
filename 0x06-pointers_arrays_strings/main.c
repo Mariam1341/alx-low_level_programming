@@ -6,56 +6,6 @@
  *
  * Return: Always 0.
  */
-int _strlen(char *s)
-{
-	int i = 0;
-
-	while (s[i])
-	{
-		i++;
-	}
-	return (i);
-}
-
-char *_strcat(char *dest, char *src)
-{
-	int a = 0, i = 0;
-
-	while (dest[i] != '\0')
-		i++;
-
-	while (src[a] != '\0')
-	{
-		dest[i] = src[a];
-		i++;
-		a++;
-	}
-	return (dest);
-}
-
-void print(char *arr, int n){
-	int j;
-	for (j = 0; j < n; j++)
-		printf(arr[j]);
-}
-char *_strncat(char *dest, char *src, int n)
-{
-	int i = _strlen(src);
-
-	if (i < n)
-		return (_strcat(dest,src));
-	else
-	{
-		int j;
-		char arr[n+1];
-		for (j = 0; j < n; j++)
-			arr[j] = src[j];
-		arr[j] = '\0';
-		return (_strcat(dest,arr));
-	}	
-}
-
-
 int main(void)
 {
      char s1[98] = "Hello ";
