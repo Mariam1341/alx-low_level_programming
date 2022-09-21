@@ -8,12 +8,15 @@
 char *string_toupper(char *a)
 {
 	int i = 0, num;
-
+	
 	while (a[i] != '\0')
 	{
-		if (a[i] >= 'a' && a[i] <= 'z')
-			a[i] -= 32;
+		num = (int) a[i];
+		if (num >= 97)
+		{
+			num -= 32;
+			a[i] = (char) num;
+		}
 		i++;
 	}
-	return (a);
 }
