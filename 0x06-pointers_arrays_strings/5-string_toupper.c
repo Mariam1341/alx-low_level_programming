@@ -8,7 +8,7 @@
 char *string_toupper(char *a)
 {
 	int i = 0, num;
-	
+
 	while (a[i] != '\0')
 	{
 		num = (int) a[i];
@@ -19,4 +19,5 @@ char *string_toupper(char *a)
 		}
 		i++;
 	}
+	return (a);
 }
