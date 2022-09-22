@@ -6,43 +6,34 @@
  *
  * Return: Always 0.
  */
-char *cap_string(char *a)
+char *leet(char *str)
 {
-	int i = 0, num,j, flag;
-	char sep[] = ",\t;\n; .!?\"(){}";
-
-	while (a[i] != '\0')
+	int i = 0, j;
+	char cap[] = "aeotl", sm[] = "AEOTL";
+	char n[] = "43071";
+	
+	while (str[i] != '\0')
 	{
 		j = 0;
-		while (sep[j] != '\0')
+		while (cap[j] != '\0')
 		{
-			if (a[i] == sep[j])
+			if (str[i] == cap[j] || str[i] == sm[j])
 			{
-				if (a[i] == '\t')
-					a[i] = ' ';
-				i++;
-				num = (int) a[i];
-				if (num >= 97 && num <= 122)
-				{
-					num -= 32;
-					a[i] = (char) num;
-				}
-				else 
-					i--;
-				break;
+				str[i] = n[j];
 			}
 			j++;
 		}
 		i++;
 	}
-	return (a);
+	return (str);
 }
 int main(void)
 {
-    char str[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
-    char *ptr;
-    ptr = cap_string(str);
-    printf("%s", ptr);
-    printf("%s", str);
+    char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
+    char *p;
+
+    p = leet(s);
+    printf("%s", p);
+    printf("%s", s);
     return (0);
 }
