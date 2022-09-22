@@ -18,13 +18,17 @@ char *cap_string(char *a)
 		{
 			if (a[i] == sep[j])
 			{
+				if (a[i] == '\t')
+					a[i] = ' ';
 				i++;
 				num = (int) a[i];
-				if (num >= 97)
+				if (num >= 97 && num <= 122)
 				{
 					num -= 32;
 					a[i] = (char) num;
 				}
+				else 
+					i--;
 				break;
 			}
 			j++;
