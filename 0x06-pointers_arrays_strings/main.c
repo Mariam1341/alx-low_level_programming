@@ -6,34 +6,44 @@
  *
  * Return: Always 0.
  */
-char *leet(char *str)
+char *rot13(char *s)
 {
-	int i = 0, j;
-	char cap[] = "aeotl", sm[] = "AEOTL";
-	char n[] = "43071";
-	
-	while (str[i] != '\0')
+int i, ii;
+char input[] =  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char output[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+for (i = 0; s[i] != '\0'; i++)
+{
+	for (ii = 0; ii < 54; ii++)
 	{
-		j = 0;
-		while (cap[j] != '\0')
+		if (((s[i] <= 'z' && s[i] >= 'a') || (s[i] <= 'Z' && s[i] >= 'A'))
+		&& s[i] == input[ii])
 		{
-			if (str[i] == cap[j] || str[i] == sm[j])
-			{
-				str[i] = n[j];
-			}
-			j++;
+			s[i] = output[ii];
+			break;
 		}
-		i++;
 	}
-	return (str);
+}
+	return (s);
 }
 int main(void)
 {
-    char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
+    char s[] = "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.\n";
     char *p;
 
-    p = leet(s);
-    printf("%s", p);
-    printf("%s", s);
+    p = rot13(s);
+//    printf("%s", p);
+//    printf("------------------------------------\n");
+//    printf("%s", s);
+//    printf("------------------------------------\n");
+//    p = rot13(s);
+//    printf("%s", p);
+//    printf("------------------------------------\n");
+//    printf("%s", s);
+//    printf("------------------------------------\n");
+//    p = rot13(s);
+//    printf("%s", p);
+//    printf("------------------------------------\n");
+//    printf("%s", s);
     return (0);
 }
