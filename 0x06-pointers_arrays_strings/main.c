@@ -6,17 +6,28 @@
  *
  * Return: Always 0.
  */
-char *string_toupper(char *a)
+char *cap_string(char *a)
 {
-	int i = 0, num;
-	
+	int i = 0, num,j, flag;
+	char sep[] = ",\t;\n; .!?\"(){}";
+
 	while (a[i] != '\0')
 	{
-		num = (int) a[i];
-		if (num > 97)
+		j = 0;
+		while (sep[j] != '\0')
 		{
-			num -= 32;
-			a[i] = (char) num;
+			if (a[i] == sep[j])
+			{
+				i++;
+				num = (int) a[i];
+				if (num >= 97)
+				{
+					num -= 32;
+					a[i] = (char) num;
+				}
+				break;
+			}
+			j++;
 		}
 		i++;
 	}
@@ -24,10 +35,9 @@ char *string_toupper(char *a)
 }
 int main(void)
 {
-    char str[] = "Look up!\n";
+    char str[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
     char *ptr;
-
-    ptr = string_toupper(str);
+    ptr = cap_string(str);
     printf("%s", ptr);
     printf("%s", str);
     return (0);
