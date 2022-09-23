@@ -10,13 +10,7 @@ char *cap_string(char *a)
 int i = 0, num, j;
 char sep[] = ",\t;\n; .!?\"(){}";
 
-num = (int) a[0];
-if (num >= 97 && num <= 122)
-{
-  num -= 32;
-  a[0] = (char) num;
-}
-i++;
+
 while (a[i] != '\0')
 {
 j = 0;

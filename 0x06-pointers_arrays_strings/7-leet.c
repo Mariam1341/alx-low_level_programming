@@ -3,7 +3,7 @@
  *
  * @str : pointer to the string
  *
- * Return :char
+ * Return :encoded string
 */
 char *leet(char *str)
 {

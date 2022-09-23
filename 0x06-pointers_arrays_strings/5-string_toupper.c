@@ -3,7 +3,7 @@
  *
  * @a : pointer to the string
  *
- * Return : char
+ * Return : uppercase string
 */
 char *string_toupper(char *a)
 {

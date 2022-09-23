@@ -3,7 +3,7 @@
  *
  * @s : pointer to the string
  *
- * Return : char
+ * Return : rotted string
 */
 char *rot13(char *s)
 {
