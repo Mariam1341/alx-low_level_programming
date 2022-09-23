@@ -1,9 +1,9 @@
 /**
  **rot13 - encodes a string into 1337.
  *
- * @str : pointer to the string
+ * @s : pointer to the string
  *
- * Return : pointer to the string after transformation
+ * Return : char
 */
 char *rot13(char *s)
 {

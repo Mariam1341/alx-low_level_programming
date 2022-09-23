@@ -3,7 +3,7 @@
  *
  * @a : pointer to the string
  *
- * Return : pointer to the string after transformation
+ * Return : char
 */
 char *string_toupper(char *a)
 {
