@@ -8,37 +8,31 @@
  *
  * Return: Nothing.
  */
-char *_strstr(char *haystack, char *needle)
-{
-	int index, flag = 1;
 
-	while (*haystack)
+void print_chessboard(char (*a)[8])
+{
+	int i, j;
+	
+	for (i = 0; i < 8; i++)
 	{
-		if (haystack[0] == needle[0])
+		for (j = 0; j < 8; j++)
 		{
-			for (index = 1; needle[index] != '\0'; index++)
-			{
-				if (haystack[index] != needle[index])
-				{
-					flag = 0;
-					break;	
-				}
-				flag = 1;
-			}
-			if (flag)
-				return (haystack);
+			putchar(a[i][j]);
 		}
-		haystack++;
+		putchar('\n');
 	}
-	return ('\0');
-}
-int main(void)
+}int main(void)
 {
-    char *s = "hello, world";
-    char *f = "world";
-    char *t;
-
-    t = _strstr(s, f);
-    printf("%s\n", t);
+    char board[8][8] = {
+        {'r', 'k', 'b', 'q', 'k', 'b', 'k', 'r'},
+        {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
+        {'R', 'K', 'B', 'Q', 'K', 'B', 'K', 'R'},
+    };
+    print_chessboard(board);
     return (0);
 }
