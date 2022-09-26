@@ -8,30 +8,36 @@
  *
  * Return: Nothing.
  */
- 
-char *_strchr(char *s, char c)
+unsigned int _strspn(char *s, char *accept)
 {
-	int i = 0;
-
+	unsigned int i = 0, check = 0, k, j;
+	
+	for (k = 0; accept[k] != '\0'; k++); // get accept lengh
+	
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
-			return (s + i);
+		for (j = 0; accept[j] != '\0'; j++)
+		{
+			if (s[i] == accept[j])
+			{
+				check++;
+				break;
+			}
+			else if (accept[j + 1] == '\0')
+				return (check);
+		}
 		i++;
 	}
-
-	return ('\0');
+	return (check);
+	
 }
 int main(void)
 {
-    char *s = "hello";
-    char *f;
+    char *s = "hello, world";
+    char *f = "oleh";
+    unsigned int n;
 
-    f = _strchr(s, 'l');
-
-    if (f != NULL)
-    {
-        printf("%s\n", f);
-    }
+    n = _strspn(s, f);
+    printf("%u\n", n);
     return (0);
 }
