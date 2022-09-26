@@ -1,4 +1,7 @@
-#include <stdio.h>.
+#include <stdio.h>
+/**
+ * print_chessboard :  prints the chessboard..
+ * @haystack: array to be printed.
  *
  * Return: Nothing
 **/
