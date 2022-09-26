@@ -8,33 +8,42 @@
  *
  * Return: Nothing.
  */
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-	unsigned int i = 0, check = 0, k, j;
-
-	while (s[i] != '\0')
-	{
-		for (j = 0; accept[j] != '\0'; j++)
-		{
-			if (s[i] == accept[j])
-			{
-				check++;
-				break;
-			}
-			else if (accept[j + 1] == '\0')
-				return (check);
-		}
-		i++;
-	}
-	return (check);
+    int i, j, pos, flag = 0;
+    for (i = 0; s[i] != '\0';i++);
+    pos = i;
+    for (i = 0; accept[i] != '\0';i++)
+    {
+        for (j = 0; s[j] != '\0';j++)
+        {
+            if (accept[i] == s[j])
+            {
+                if (j <= pos)
+                {
+                    pos = j;    
+                    flag = 1;  
+					break;  
+                }
+            }
+         }        
+    }
+    if (flag == 1)
+    {
+        return &s[pos];
+    }
+    else
+    {
+        return NULL;
+    }
 }
 int main(void)
 {
     char *s = "hello, world";
-    char *f = "oleh";
-    unsigned int n;
+    char *f = "world";
+    char *t;
 
-    n = _strspn(s, f);
-    printf("%u\n", n);
+    t = _strpbrk(s, f);
+    printf("%s\n", t);
     return (0);
 }
