@@ -11,9 +11,7 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i = 0, check = 0, k, j;
-	
-	for (k = 0; accept[k] != '\0'; k++); // get accept lengh
-	
+
 	while (s[i] != '\0')
 	{
 		for (j = 0; accept[j] != '\0'; j++)
@@ -29,7 +27,6 @@ unsigned int _strspn(char *s, char *accept)
 		i++;
 	}
 	return (check);
-	
 }
 int main(void)
 {
