@@ -1,6 +1,6 @@
-#include <stdio.h>
+#include <main.h>
 /**
- * print_chessboard :  prints the chessboard..
+ * print_chessboard :  prints the chessboard.
  * @haystack: array to be printed.
  *
  * Return: Nothing
@@ -9,13 +9,10 @@ void print_chessboard(char (*a)[8])
 {
 	int i, j;
 	
-	for (i = 0; i < 8; i++)
+	for (i = 0; a[i][7]; i++)
 	{
 		for (j = 0; j < 8; j++)
-		{
-			putchar(a[i][j]);
-		}
-		if (i != 7)
-			putchar('\n);
+			_putchar(a[i][j]);
+		_putchar('\n);
 	}
 }
