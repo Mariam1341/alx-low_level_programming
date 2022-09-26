@@ -3,8 +3,7 @@
  * @s: The string to be searched.
  * @c: The character to be located.
  *
- * Return: If c is found - a pointer to the first occurence.
- * If c is not found - NULL.
+ * Return: Null or the rest of string
  */
 char *_strchr(char *s, char c)
 {
