@@ -9,48 +9,37 @@
  * Return: Nothing.
  */
  
- char *_memset(char *s, char b, unsigned int n)
+ char *_strchr(char *s, char c)
 {
-	int i;
-	for (i = 0; i < n; i++)
+	int i = 0, j = 0;
+	char *d;
+	
+	while (s[i] != '\0')
 	{
-		s[i] = b;
+		if (s[i] == c)
+			break;
+		i++;	
 	}
-	return (s);
+	if (s[i] == '\0')
+		return (NULL);
+	while (s[i] != '\0')
+	{
+		d[j] = s[i];
+		i++;
+		j++;
+	}
+	return (d);
 }
-void simple_print_buffer(char *buffer, unsigned int size)
-{
-        unsigned int i;
-
-        i = 0;
-        while (i < size)
-        {
-                if (i % 10)
-                {
-                        printf(" ");
-                }
-                if (!(i % 10) && i)
-                {
-                        printf("\n");
-                }
-                printf("0x%02x", buffer[i]);
-                i++;
-        }
-        printf("\n");
-}
-
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
 int main(void)
 {
-    char buffer[98] = {0x00};
+    char *s = "hello";
+    char *f;
 
-    simple_print_buffer(buffer, 98);
-    _memset(buffer, 0x01, 95);
-    printf("-------------------------------------------------\n");
-    simple_print_buffer(buffer, 98);    
+    f = _strchr(s, 'l');
+
+    if (f != NULL)
+    {
+        printf("%s\n", f);
+    }
     return (0);
 }
