@@ -9,26 +9,18 @@
  * Return: Nothing.
  */
  
- char *_strchr(char *s, char c)
+char *_strchr(char *s, char c)
 {
-	int i = 0, j = 0;
-	char *d;
-	
+	int i = 0;
+
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
-			break;
-		i++;	
-	}
-	if (s[i] == '\0')
-		return (NULL);
-	while (s[i] != '\0')
-	{
-		d[j] = s[i];
+			return (s + i);
 		i++;
-		j++;
 	}
-	return (d);
+
+	return ('\0');
 }
 int main(void)
 {
