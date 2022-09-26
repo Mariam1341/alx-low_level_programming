@@ -8,34 +8,29 @@
  *
  * Return: Nothing.
  */
-char *_strpbrk(char *s, char *accept)
+char *_strstr(char *haystack, char *needle)
 {
-    int i, j, pos, flag = 0;
-    for (i = 0; s[i] != '\0';i++);
-    pos = i;
-    for (i = 0; accept[i] != '\0';i++)
-    {
-        for (j = 0; s[j] != '\0';j++)
-        {
-            if (accept[i] == s[j])
-            {
-                if (j <= pos)
-                {
-                    pos = j;    
-                    flag = 1;  
-					break;  
-                }
-            }
-         }        
-    }
-    if (flag == 1)
-    {
-        return &s[pos];
-    }
-    else
-    {
-        return NULL;
-    }
+	int index, flag = 1;
+
+	while (*haystack)
+	{
+		if (haystack[0] == needle[0])
+		{
+			for (index = 1; needle[index] != '\0'; index++)
+			{
+				if (haystack[index] != needle[index])
+				{
+					flag = 0;
+					break;	
+				}
+				flag = 1;
+			}
+			if (flag)
+				return (haystack);
+		}
+		haystack++;
+	}
+	return ('\0');
 }
 int main(void)
 {
@@ -43,7 +38,7 @@ int main(void)
     char *f = "world";
     char *t;
 
-    t = _strpbrk(s, f);
+    t = _strstr(s, f);
     printf("%s\n", t);
     return (0);
 }
