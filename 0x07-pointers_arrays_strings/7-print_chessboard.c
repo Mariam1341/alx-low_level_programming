@@ -3,7 +3,7 @@
  * print_chessboard :  prints the chessboard.
  * @haystack: array to be printed.
  *
- * Return: void
+ * Return: Nothing
 **/
 void print_chessboard(char (*a)[8])
 {
