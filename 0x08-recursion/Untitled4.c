@@ -1,18 +1,40 @@
 #include<stdio.h>
-int _strlen_recursion(char *s)
+int is_prime_number(int n)
 {
-int i = 0;
-
-if (*s != '\0')
-	i += _strlen_recursion(s + 1) + 1;
-
-return i;	
+	if (n < 0)
+		n = n * -1;
+	if (n == 1)
+		return (0);
+	return (prime(n, 2));
+}
+int prime(int n, int num)
+{
+	if (n != num && n % num == 0)
+		return (0);
+	else if (num < n)
+		return (prime(n, num + 1));
+	else
+		return (1);
 }
 int main(void)
 {
-    int n;
+    int r;
 
-    n = _strlen_recursion("Corbin Coleman");
-    printf("%d\n", n);
+    r = is_prime_number(1);
+    printf("%d\n", r);
+    r = is_prime_number(1024);
+    printf("%d\n", r);
+    r = is_prime_number(16);
+    printf("%d\n", r);
+    r = is_prime_number(17);
+    printf("%d\n", r);
+    r = is_prime_number(25);
+    printf("%d\n", r);
+    r = is_prime_number(-1);
+    printf("%d\n", r);
+    r = is_prime_number(113);
+    printf("%d\n", r);
+    r = is_prime_number(7919);
+    printf("%d\n", r);
     return (0);
 }
