@@ -1,3 +1,4 @@
+#include"main.h"
 /**
  * is_prime_number - check if the input integer is a prime number or not
  * @n: int
