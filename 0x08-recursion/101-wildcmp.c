@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include"main.h"
 /**
  * wildcmp - check the code for Holberton School students.
  * @s1: string
