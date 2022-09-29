@@ -1,29 +1,18 @@
 #include<stdio.h>
-int _pow_recursion(int x, int y)
+int _strlen_recursion(char *s)
 {
-	if (y < 0)
-		return (-1);
-	else if (x == 1 || y == 0)
-		return (1);
-	else
-		return x * _pow_recursion(x , y -1);
-	
+int i = 0;
+
+if (*s != '\0')
+	i += _strlen_recursion(s + 1) + 1;
+
+return i;	
 }
 int main(void)
 {
-    int r;
+    int n;
 
-    r = _pow_recursion(1, 10);
-    printf("%d\n", r);
-    r = _pow_recursion(1024, 0);
-    printf("%d\n", r);
-    r = _pow_recursion(2, 16);
-    printf("%d\n", r);
-    r = _pow_recursion(5, 2);
-    printf("%d\n", r);
-    r = _pow_recursion(5, -2);
-    printf("%d\n", r);
-    r = _pow_recursion(-5, 3);
-    printf("%d\n", r);
+    n = _strlen_recursion("Corbin Coleman");
+    printf("%d\n", n);
     return (0);
 }
