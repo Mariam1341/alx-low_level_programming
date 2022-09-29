@@ -6,15 +6,15 @@
  */
 int _sqrt_recursion(int n)
 {
-	return (square(n, 1))
+	return (square(n, 1));
 }
 
 int square(int n, int val)
 {
-	if if (val * val < n)
+	if (val * val < n)
 		return (square(n, val + 1));
 	else if (val * val == n)
-		return (i);
+		return (val);
 	else
 		return (-1);
 }
