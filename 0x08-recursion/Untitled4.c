@@ -1,12 +1,24 @@
-void _print_rev_recursion(char *s)
+#include<stdio.h>
+int _strlen_recursion(char *s)
 {
-if (*s > '\0')
+int i = 0;
+
+if (*s == '\0')
 {
-	_print_rev_recursion(s + 1);
-	putchar(*s);
-}}
+	return i;
+}
+else
+{
+	i+=_strlen_recursion(s+1)+1;
+}
+
+
+}
 int main(void)
 {
-    _print_rev_recursion("Puts with recursion");
+    int n;
+
+    n = _strlen_recursion("Corbin Coleman");
+    printf("%d\n", n);
     return (0);
 }
