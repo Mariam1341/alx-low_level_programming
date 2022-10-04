@@ -16,14 +16,14 @@ int i = 1;
 if (argc == 1)
 {
 	printf("0\n");
-	return (1);	
+	return (0);	
 }
 while (i < argc)
 {
 	if (argv[i] < '0' || argv[i] > '9')
 	{
 		printf("Error\n");
-		return (1);		
+		return (0);		
 	}
 	sum += atoi(argv[i]);
 }
