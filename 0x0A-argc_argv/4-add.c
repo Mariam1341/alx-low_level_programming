@@ -13,9 +13,14 @@ int main(int argc, char const *argv[])
 int sum = 0;
 int i = 1;
 
+if (argc == 1)
+{
+	printf("0\n");
+	return (1);	
+}
 while (i < argc)
 {
-	if (s[i] < '0' || s[i] > '9')
+	if (argv[i] < '0' || argv[i] > '9')
 	{
 		printf("Error\n");
 		return (1);		
