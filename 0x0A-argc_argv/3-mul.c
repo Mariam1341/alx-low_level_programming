@@ -10,6 +10,7 @@
 int main(int argc, char const *argv[])
 {
 (void)argc;
-printf("%d\n", argv[1] * argv[2]);
+int res = argv[1] * argv[2];
+printf("%d\n", res);
 return (0);
 }
