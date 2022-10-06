@@ -1,49 +1,72 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+int **alloc_grid(int width, int height)
+{
+int **tab, i, j;
+tab = malloc(sizeof(*tab) * height);
+
+if (width <= 0 || height <= 0 || tab == 0)
+	return (NULL);
+
+else
+{
+	for (i = 0; i < height; i++)
+	{
+		tab[i] = malloc(sizeof(**tab) * width);
+		if (tab[i] == 0)
+		{
+			/*Free everything if malloc fails*/
+			while (i--)
+				free(tab[i]);
+			free(tab);
+			return (NULL);
+		}
+
+		for (j = 0; j < width; j++)
+			tab[i][j] = 0;
+	}
+}
+
+return (tab);
+}
+void print_grid(int **grid, int width, int height)
+{
+    int w;
+    int h;
+
+    h = 0;
+    while (h < height)
+    {
+        w = 0;
+        while (w < width)
+        {
+            printf("%d ", grid[h][w]);
+            w++;
+        }
+        printf("\n");
+        h++;
+    }   
+}
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
+ * main - check the code for ALX School students.
  *
- * Return: Nothing.
+ * Return: Always 0.
  */
-char *str_concat(char *s1, char *s2)
-{
-	int i = 1, j = 1, sum, k;
-	if (s1 == NULL && s2 == NULL)
-		return (0);
-	if (s1 != NULL)
-		for (i = 0; s1[i] != '\0'; i++);
-	if (s2 != NULL)
-		for (j = 0; s2[j] != '\0'; j++);
-	
-//	sum = i + j;
-	char *s = malloc(i +j);
-	if (i == 1)	
-		s[0] = ' ';
-	else 
-		for (i = 0; s1[i] != '\0'; i++)
-			s[i] = s1[i];
-	if (j == 1)	
-		s[i + 1] = ' ';
-	else 
-		for (k = 0; s2[k] != '\0'; k++)
-			s[i + k] = s2[k];
-	return (s);
-}
 int main(void)
 {
-    char *s;
+    int **grid;
 
-    s = str_concat("Betty ", "Holberton");
-    if (s == NULL)
+    grid = alloc_grid(6, 4);
+    if (grid == NULL)
     {
-        printf("failed\n");
         return (1);
     }
-    printf("%s\n", s);
-    free(s);
+    print_grid(grid, 6, 4);
+    printf("\n");
+    grid[0][3] = 98;
+    grid[3][4] = 402;
+    print_grid(grid, 6, 4);
     return (0);
 }
