@@ -1,0 +1,9 @@
+the diffrence between malloc and calloc 
+maloc(n * sizeof(int)) => not insialized the memory
+caloc(n , sizeof(int)) => insialized the memory by 0
+
+realloc(NULL, n * sizeof(int)) == malloc
+realloc(A, 0) == free(A)
+realloc(A, (n/2) * sizeof(int)) == malloc
+before A = 1 2 3 4 5
+after  A = 1 2 the rest is a random addresses
