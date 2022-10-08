@@ -1,6 +1,5 @@
 # Low-Level Programming - Data Structures, Algorithms, Linux/Unix System Programming
 
-## About
 
 This repository consists of all the C programming projects done with [ALX Africa](https://www.alxafrica.com/) Full stack Software Engineering Programme in partnership with [Holberton School](https://www.holbertonschool.com/) by [Mariam1341](https://github.com/Mariam1341).
 
