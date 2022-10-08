@@ -1,19 +1,19 @@
 # Low-Level Programming - Data Structures, Algorithms, Linux/Unix System Programming
 
-![img](https://assets.imaginablefutures.com/media/images/ALX_Logo.max-200x150.png)
+<!-- ![img](https://assets.imaginablefutures.com/media/images/ALX_Logo.max-200x150.png)
 
 
->Learning C right now, been wanting to get on this. It's going to be FUN !!.
+>Learning C right now, been wanting to get on this. It's going to be FUN !!. -->
 
 <p align="center">
-  <img src="https://i.postimg.cc/rprHShJ1/C-compilation-process.gif" />
+  <img src="https://assets.imaginablefutures.com/media/images/ALX_Logo.max-200x150.png" />
 </p>
 
 ## About
 
-- This repository consists of all the C programming projects done with [ALX Africa](https://www.alxafrica.com/) Full stack Software Engineering Programme in partnership with [Holberton School](https://www.holbertonschool.com/) by [Mariam1341](https://github.com/Mariam1341).
-- All main.c files are prewritten by the school. We build functions that produce a specific output while also taking into consideration edge cases.
-- I am learning about data structures, algorithms, and other low-level programming concepts while
+This repository consists of all the C programming projects done with [ALX Africa](https://www.alxafrica.com/) Full stack Software Engineering Programme in partnership with [Holberton School](https://www.holbertonschool.com/) by [Mariam1341](https://github.com/Mariam1341).
+
+ I am learning about data structures, algorithms, and other low-level programming concepts while
 working in the C language. I update this repo with my learning progresses with hands-on projects as listed below:
 
 * [0x00. C - Hello, World](./0x00-hello_world)
