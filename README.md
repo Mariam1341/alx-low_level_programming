@@ -1,14 +1,5 @@
 # Low-Level Programming - Data Structures, Algorithms, Linux/Unix System Programming
 
-<!-- ![img](https://assets.imaginablefutures.com/media/images/ALX_Logo.max-200x150.png)
-
-
->Learning C right now, been wanting to get on this. It's going to be FUN !!. -->
-
-<p align="center">
-  <img src="https://assets.imaginablefutures.com/media/images/ALX_Logo.max-200x150.png" />
-</p>
-
 ## About
 
 This repository consists of all the C programming projects done with [ALX Africa](https://www.alxafrica.com/) Full stack Software Engineering Programme in partnership with [Holberton School](https://www.holbertonschool.com/) by [Mariam1341](https://github.com/Mariam1341).
@@ -33,10 +24,10 @@ working in the C language. I update this repo with my learning progresses with h
 - more projects are coming soon!!
 - I am on my way to be the best software engineer that I  can possibly  be!
 
+
 ## Author 
 + [Mariam Mohammed](https://github.com/Mariam1341)
 
----
 
 ## WARNING!!
 - This repo is done as a school assignment. Beware of copying my responses. I recommend you  to read resources and come up with your own solutions instead. Feel free to reach out for help!
