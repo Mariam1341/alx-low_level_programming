@@ -13,7 +13,7 @@
 
 - This repository consists of all the C programming projects done with [ALX Africa](https://www.alxafrica.com/) Full stack Software Engineering Programme in partnership with [Holberton School](https://www.holbertonschool.com/) by [Mariam1341](https://github.com/Mariam1341).
 - All main.c files are prewritten by the school. We build functions that produce a specific output while also taking into consideration edge cases.
--I am learning about data structures, algorithms, and other low-level programming concepts while
+- I am learning about data structures, algorithms, and other low-level programming concepts while
 working in the C language. I update this repo with my learning progresses with hands-on projects as listed below:
 
 * [0x00. C - Hello, World](./0x00-hello_world)
