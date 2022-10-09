@@ -2,7 +2,7 @@
 
 /**
  * free_grid - frees a 2 dimensional grid previously created
- * @**grid: int
+ * @grid: int
  * @height: int
  * Return: void
  */
