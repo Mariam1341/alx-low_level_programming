@@ -1,72 +1,36 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-int **alloc_grid(int width, int height)
+char *argstostr(int ac, char **av)
 {
-int **tab, i, j;
-tab = malloc(sizeof(*tab) * height);
+	char *s;
+	int i = 0;
 
-if (width <= 0 || height <= 0 || tab == 0)
-	return (NULL);
+	if (ac == 0 || av == NULL)
+		return (NULL);
 
-else
-{
-	for (i = 0; i < height; i++)
+	while (*av[i] != '\0')
 	{
-		tab[i] = malloc(sizeof(**tab) * width);
-		if (tab[i] == 0)
-		{
-			/*Free everything if malloc fails*/
-			while (i--)
-				free(tab[i]);
-			free(tab);
-			return (NULL);
-		}
-
-		for (j = 0; j < width; j++)
-			tab[i][j] = 0;
+		s[i] = av[i] + "\n";
 	}
+	return s;
+	
 }
-
-return (tab);
-}
-void print_grid(int **grid, int width, int height)
-{
-    int w;
-    int h;
-
-    h = 0;
-    while (h < height)
-    {
-        w = 0;
-        while (w < width)
-        {
-            printf("%d ", grid[h][w]);
-            w++;
-        }
-        printf("\n");
-        h++;
-    }   
-}
-
 /**
  * main - check the code for ALX School students.
  *
  * Return: Always 0.
  */
-int main(void)
+int main(int ac, char *av[])
 {
-    int **grid;
+    char *s;
 
-    grid = alloc_grid(6, 4);
-    if (grid == NULL)
+    s = argstostr(ac, av);
+    if (s == NULL)
     {
         return (1);
     }
-    print_grid(grid, 6, 4);
-    printf("\n");
-    grid[0][3] = 98;
-    grid[3][4] = 402;
-    print_grid(grid, 6, 4);
+    printf("%s", s);
+    free(s);
     return (0);
 }
